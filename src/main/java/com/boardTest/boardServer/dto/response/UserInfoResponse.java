@@ -8,4 +8,4 @@ import lombok.Getter;
 @AllArgsConstructor
 public class UserInfoResponse {
     private UserDTO userDTO;
-}ㅁ
+}
