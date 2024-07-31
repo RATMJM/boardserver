@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: boardserver
+  datasource:
+    jdbc-url: jdbc:mariadb://118.67.151.198:3306/bluecanvas
+    username: chanyul
+    password: chanyul!5157
+  mybatis:
+    mapper-locations: classpath:com.boardTest.boardServer.mapper/*.xml
+  session:
+    storage-type: redis
+  data:
+    cache: redis
+    redis:
+      host: localhost
+      port: 6379
+

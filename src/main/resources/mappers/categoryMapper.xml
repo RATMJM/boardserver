@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boardTest.boardServer.mapper.CategoryMapper">
+
+    <insert id="register" parameterType="com.boardTest.boardServer.dto.CategoryDTO">
+        INSERT INTO category_copy(id,name)
+        VALUES (#{id}, #{name})
+    </insert>
+
+    <update id="updateCategory" parameterType="com.boardTest.boardServer.dto.CategoryDTO">
+        UPDATE category_copy
+        SET name = #{name}
+        WHERE id=#{id}
+    </update>
+
+    <delete id="deleteCategory">
+        DELETE FROM category_copy
+        WHERE id= #{id}
+    </delete>
+</mapper>
